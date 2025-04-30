@@ -10,3 +10,8 @@ spring:
           default-label: main  # Это ветка, которую использовать, по умолчанию - main
   application:
     name: config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

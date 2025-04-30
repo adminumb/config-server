@@ -7,11 +7,9 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.2</version>
         <relativePath/>
     </parent>
-
-
 
     <groupId>com.example</groupId>
     <artifactId>config-server</artifactId>
@@ -21,10 +19,8 @@
 
     <properties>
         <java.version>21</java.version>
-        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <spring-cloud.version>2024.0.1</spring-cloud.version>
     </properties>
-
-
 
     <dependencyManagement>
         <dependencies>
@@ -42,6 +38,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+<!--        добавляя spring-cloud-starter-netflix-eureka-client, ты встраиваешь config-server в инфраструктуру Eureka, -->
+<!--        чтобы другие сервисы могли его находить динамически.-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
